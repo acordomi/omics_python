@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>prot_to_gene</h1>
+  
+  <h2>Description</h2>
+  <p> Write a function <b>prot2gene(protein_name)</b> that, given a protein entry name, returns its (standard) gene name.
+    
+</p>
+<h2>Hint</h2>
+<!--
+<pre><code>
+</code></pre>
+-->
+<p>You may use Biopython's SwissProt tools or create your own
+</p>
+
+<h2>Tests</h2>
+  <pre>    >>> prot2gene("PACR_BOVIN")
+    'ADCYAP1R1'
+    >>> prot2gene("")
+    ''
+    >>> prot2gene("AAAAA_HUMAN")
+    ''
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+  <!--
+  <h3>Related exercises:</h3>
+  <p><a href="rna_to_prot.html">rna_to_prot</a></p>
+  -->
+</body>
+</html>

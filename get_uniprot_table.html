@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>get_uniprot_table</h1>
+  
+  <h2>Description</h2>
+  <p> Write a function <b>uniprotquery2pandas(query)</b> that sends a query to the UniProt site and returns the data in a panda's DataFrame.
+    As an example of a query, the url for the query "muscarinic+receptor" is <a href="https://rest.uniprot.org/uniprotkb/stream?fields=accession%2Creviewed%2Cid%2Cprotein_name%2Cgene_names%2Corganism_name%2Clength&format=tsv&query=%28muscarinic+receptor%29">this one</a>.
+   
+</p>
+<h2>Hint</h2>
+<pre><code>df = pd.DataFrame(data=data_in_rows, columns=column_names)
+</code></pre>
+<p>where data_in_rows is a list of list (with the actual data) and column_names a list with just the attribute names</p>
+
+<h2>Tests</h2>
+  <pre>    >>> df = uniprotquery2pandas("muscarinic+receptor")
+    >>> df.columns[1]
+    'Entry Name'
+    >>> len(df) > 10
+    True
+    >>> df.loc['O00622']['Entry Name']
+    'CCN1_HUMAN'
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+  <!--
+  <h3>Related exercises:</h3>
+  <p><a href="rna_to_prot.html">rna_to_prot</a></p>
+  -->
+</body>
+</html>

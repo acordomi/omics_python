@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>prot2dna</h1>
+  
+  <h2>Description</h2>
+  <p> Write a function <b>prot2dna(seq)</b> that uses the <b>back_table</b> dictionary in CodonTable to generate one possible DNA sequence ncoding the input sequence.
+</p>
+<h2>Hint</h2>
+<pre><code>import CodonTable from Bio.Data
+The dictionary is in CodonTable.unambiguous_dna_by_name['Standard'].back_table
+</code></pre>
+  <h2>Tests</h2>
+  <pre>    >>> len(read_gencode("gencode.txt"))
+    64
+    >>> rna2prot(["AUU", "CAU", "AUC"])
+    'IHI'
+    >>> rna2prot(["ATT", "CAT", "ATC"])
+    'IHI'
+    >>> rna2prot(["CGA", "GUG", "UAA"])
+    'RV/'
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+  <!--
+  <h3>Related exercises:</h3>
+  <p><a href="rna_to_prot.html">rna_to_prot</a></p>
+  -->
+</body>
+</html>

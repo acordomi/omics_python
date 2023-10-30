@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>promoters</h1>
+  
+  <h2>Description</h2>
+  <p>In 1983, Hawley & McClure <a href="https://pubmed.ncbi.nlm.nih.gov/6344016/">identified</a> that middle gene promoters in bacteriophage T4 had two consensus sequences: a MotA box with the sequence <b>TTGATT</b>
+     centered at position -30 and the sequence <b>TAnAnT</b> (n: any base) centered at position -10 relative to the transcriptional start site.
+    The objective here is to create a script that reads the <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_000866.4?report=fasta">genome sequence</a> and counts the number of matches.
+    We need to consider matches in the forward strand and in the complementary strand. We thus need to obtain the reverse complementary sequence (re-use the function <b>rev_compl()</b> from <b>complementary</b>. You may need to recall the IUPAC base <a href="https://www.bioinformatics.org/sms/iupac.html">alphabet</a>.
+</p>
+<p>You will need to create two functions:</p>
+<p><b>read_fasta(filename)</b> to read the genome in fasta format and return a the sequence as a string.</p>
+<p><b>find_matches(motif, dna)</b> to find the motif in the sequence string and return two lists with the motifs found in the forward and in the reverse strand</p> 
+<h2>Hint</h2>
+<p> A copy of the fasta file can be taken from <a href="sequence.fasta">here</a>. You may use regular expressions (<b>re module</b>). In total (both strands), you should identify 222 TTGATT and 2845 TAnAnT motifs. 
+</p>
+<pre><code> 
+</code></pre>
+
+  <h2>Tests</h2>
+  <pre>    >>> len(read_fasta("sequence.fasta"))
+    168903
+    >>> find_matches('A.', 'AGTAGTTGAG')
+    (['AG', 'AG', 'AG'], ['AA', 'AC'])
+    >>> find_matches('TA', 'AGTAGTTGAG')
+    (['TA'], ['TA'])
+    
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+  <!--
+  <h3>Related exercises:</h3>
+  <p><a href="npeptides.html">npeptides</a></p>
+  -->
+</body>
+</html>

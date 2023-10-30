@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }
+    .long {
+        overflow-wrap: break-word;
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>exp_freq</h1>
+  
+  <h2>Description</h2>
+  <p> Write a function <b>exp_freq(biopython_gencode)</b> that computes the expected frequency for each amino acid
+    considering all possible triplets in a speficic genetic code. Genetic codes are implemented in Biopython (Standard by default).
+</p>
+<h2>Hint</h2>
+<pre><code>import CodonTable from Bio.Data</code></pre>
+<p>The dictionary for the "Standard" genetic code is in CodonTable.unambiguous_dna_by_name['Standard'].back_table</p>
+<p>The list of all the genetic codes implemented in Biopython can be seen in CodonTable.unambiguous_dna_by_name.keys()</p>
+  <h2>Tests</h2>
+  <pre>    >>> len(exp_freq("Standard"))
+    20
+    >>> freqs = exp_freq("Standard")
+    >>> freqs['I']
+    0.046875
+    >>> freqs = exp_freq('Yeast Mitochondrial')
+    >>> freqs['I']
+    0.03125
+    >>> freqs = exp_freq("Plant Plastid")
+    >>> freqs['I']
+    0.046875
+    >>> freqs = exp_freq()
+    >>> freqs['I']
+    0.046875
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+  <!--
+  <h3>Related exercises:</h3>
+  <p><a href="rna_to_prot.html">rna_to_prot</a></p>
+  -->
+</body>
+</html>

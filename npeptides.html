@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Exercise</title>
+  <style>
+    p {
+        font-size: 18px
+    }
+    pre {
+        font-size: 16px
+    }    
+  </style>
+</head>
+
+
+<body>
+  <h1>npeptides</h1>
+  
+  <h2>Description</h2>
+  <p>Before addressing this exercise, you should have solved <a href="dipeptides.html">dipeptides</a> and <a href="dipeptides.html">tetrapeptides</a>.
+
+    Write a function <b>npeptides(res, n)</b> that takes as input the residues to combine (res) and the length of the peptides to generate(n) and returns dipeptides, tripeptides, ... as requested.
+    The function should call another function <b>build_peptides(res, peptides)</b> that enlarges the peptides provided with one letter from res. See the <b>Tests</b>.
+
+
+
+</p>
+
+<h2>Hint</h2>
+<p> 
+</p>
+<pre><code> 
+</code></pre>
+
+  <h2>Tests</h2>
+  <pre>    >>> build_peptides('A', [])
+    ['A']
+    >>> build_peptides('LY', ['A', 'L'])
+    ['AL', 'AY', 'LL', 'LY']
+    >>> build_peptides('', ['A'])
+    ['A']
+    >>> build_peptides('ALY', ['S'])
+    ['SA', 'SL', 'SY']
+
+    >>> npeptides('AY', 5)
+    ['AAAAA', 'AAAAY', 'AAAYA', 'AAAYY', 'AAYAA', 'AAYAY', 'AAYYA', 'AAYYY', 'AYAAA', 'AYAAY', 'AYAYA', 'AYAYY', 'AYYAA', 'AYYAY', 'AYYYA', 'AYYYY', 'YAAAA', 'YAAAY', 'YAAYA', 'YAAYY', 'YAYAA', 'YAYAY', 'YAYYA', 'YAYYY', 'YYAAA', 'YYAAY', 'YYAYA', 'YYAYY', 'YYYAA', 'YYYAY', 'YYYYA', 'YYYYY']
+    >>> npeptides('A', 10)
+    ['AAAAAAAAAA']
+    >>> npeptides('AYS', 2)
+    ['AA', 'AY', 'AS', 'YA', 'YY', 'YS', 'SA', 'SY', 'SS']
+    >>> npeptides('L', 2)
+    ['LL']
+</pre >
+
+  <hr>
+
+  <p><a href="index.html">Back to index</a></p>
+  <br>
+  <!--
+  <h3>Related Exercises:</h3>
+  <p><a href="tetrapeptides.html">tetrapeptides</a></p>
+  -->
+</body>
+</html>
