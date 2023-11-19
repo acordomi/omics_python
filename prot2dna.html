@@ -24,14 +24,12 @@
 The dictionary is in CodonTable.unambiguous_dna_by_name['Standard'].back_table
 </code></pre>
   <h2>Tests</h2>
-  <pre>    >>> len(read_gencode("gencode.txt"))
-    64
-    >>> rna2prot(["AUU", "CAU", "AUC"])
-    'IHI'
-    >>> rna2prot(["ATT", "CAT", "ATC"])
-    'IHI'
-    >>> rna2prot(["CGA", "GUG", "UAA"])
-    'RV/'
+  <pre>        >>> prot2dna('HPLMNA')
+    'CATCCTTTGATGAATGCT'
+    >>> prot2dna('')
+    ''
+    >>> prot2dna('AGUAUGCUACUCAUCUA')
+    ''
 </pre >
 
   <hr>
