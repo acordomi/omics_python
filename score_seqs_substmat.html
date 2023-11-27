@@ -37,14 +37,14 @@ subst_mat = substitution_matrices.load("BLOSUM62")
 
 
 <h2>Tests</h2>
-  <pre>     >>> score_seqs("THEFASTCAT", "THEFATCAT ", 1, "BLOSUM62")
+  <pre>    >>> score_seqs("THEFASTCAT", "THEFATCAT ", 1, "BLOSUM62")
     29
     >>> score_seqs("THEFASTCAT", "THEFATCA T", 1, "BLOSUM62")
     34
     >>> score_seqs("THEFA TCAT", "THEFASTCAT", 1, "BLOSUM62")
     52
     >>> score_seqs("THEFASTCAT", "THE", 1, "BLOSSUM62")
-    ''
+    0
 </pre >
 
   <hr>

@@ -20,7 +20,7 @@
   <h1>score_seqs_gap</h1>
   
   <h2>Description</h2>
-  <p> Write a function <b>score_seqs_gap(seq1, seq2, match, mismatch, gap)</b> that computes the alignment score between two sequences (seq1 and seq1) using a match, a mismatch and a gap penalty score.
+  <p> Write a function <b>score_seqs_gap(seq1, seq2, match, mismatch, gap)</b> that computes the alignment score between two sequences (seq1 and seq1) using a match, a mismatch and a gap penalty score. Both sequeces should have the same lenght; otherwise the score should be 0.
     
 </p>
 <!--
@@ -41,16 +41,14 @@
     >>> score_seqs_gap("THEFA TCAT", "THEFASTCAT", 1, -1, 0)
     9
     >>> score_seqs_gap("THEFASTCAT", "THE", 1, -1, 0)
-    ''
+    0
 </pre >
 
   <hr>
 
   <p><a href="index.html">Back to index</a></p>
   <br>
-  <!--
   <h3>Related exercises:</h3>
-  <p><a href="score_seqs_gap.html">score_seqs_gap</a></p>
-  -->
+  <p><a href="score_seqs_substmat.html">score_seqs_substmat</a></p>
 </body>
 </html>

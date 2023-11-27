@@ -20,7 +20,8 @@
   <h1>score_seqs</h1>
   
   <h2>Description</h2>
-  <p> Write a function <b>score_seqs(seq1, seq2, match, mismatch)</b> that computes the alignment score between two sequences (seq1 and seq1) using a match and a mismatch score.
+  <p> Write a function <b>score_seqs(seq1, seq2, match, mismatch)</b> that computes the alignment score between two sequences (seq1 and seq1) using a match and a mismatch score. 
+    Both sequeces should have the same lenght; otherwise the score should be 0.
     
 </p>
 <!--
@@ -41,7 +42,7 @@
     >>> score_seqs("THEFASTCAT", "THELASTRAT", 1, -1)
     6
     >>> score_seqs("THEFASTCAT", "THE", 1, -1)
-    ''
+    0
 </pre >
 
   <hr>
